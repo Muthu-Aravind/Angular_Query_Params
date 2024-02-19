@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form class="border border-dark p-3">
+        <!--(ngSubmit)="registerSubmitted()"-->
+        <div class="row g(0)">
+            <div class="col text-center p-2 mb-3 bg-light">
+                <span class="fs-3">Register</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col mb-3">
+                <label for="firstName" class="form-label">FirstName</label>
+                <input type="text" class="form-control" id="firstName" [value]="firstName" (keyup)="firstNameValueChange($event)">
+            </div>
+            <div class="col mb-3">
+                <label for="lastName" class="form-label">LastName</label>
+                <input type="text" class="form-control" id="lastName" [value]="lastName" (keyup)="lastNameValueChange($event)">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" [value]="email" (keyup)="emailValueChange($event)">
+                <div class="form-text"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col mb-3">
+                <label for="mobile" class="form-label">Mobile Number</label>
+                <input type="text" class="form-control" id="mobile" [value]="mobile" (keyup)="mobileValueChange($event)">
+                <div class="form-text"></div>
+            </div>
+            <div class="col ps-3 mb-3">
+                <div class="m-1">
+                    Gender
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="radio" class="form-check-input" value="m" id="male">
+                    <label class="form-check-label" for="male">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="radio" class="form-check-input" value="f" id="female">
+                    <label class="form-check-label" for="male">Female</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col mb-3">
+                <label for="pwd" class="form-label">Password</label>
+                <input type="password" class="form-control" id="pwd">
+                <div class="form-text"></div>
+            </div>
+            <div class="col mb-3">
+                <label for="rpwd" class="form-label">Repeat password</label>
+                <input type="password" class="form-control" id="rpwd">
+                <div class="form-text"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 offset-3">
+                <div class="d-grid">
+                   <button><a routerLink="/details" routerLinkActive="active" (click)="navigateToComponent()">Details</a></button> 
+                    <!--<a routerLink="/create" routerLinkActive="active">Create</a>-->
+                </div>
+            </div>
+        </div>
+    </form>
+    
+</body>
+</html>
